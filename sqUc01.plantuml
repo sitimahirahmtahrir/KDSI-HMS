@@ -1,0 +1,18 @@
+@startuml
+
+actor Admin
+Admin -> System: Login
+activate System
+System -> System: Authenticate Admin
+alt Authenticated
+    System -> Admin: Navigate to Dashboard
+    Admin -> System: View Dashboard
+    System -> Database: Retrieve House Status Data
+    Database --> System: House Status Data
+    System --> Admin: Display Dashboard with House Status Data
+else Unauthenticated
+    System --> Admin: Show Error Message
+end
+deactivate System
+
+@enduml

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Ticket Maintenance</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Additional CSS for styling */
+        .form-group {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <!-- Title of the System -->
+            <a class="navbar-brand" href="#">KDSI Staff House Management System</a>
+            <!-- Toggler/collapsible Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <!-- Dashboard Link -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Dashboard</a>
+                    </li>
+                    <!-- Logout Link -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">New Ticket Maintenance</h2>
+        <form>
+            <div class="form-group">
+                <label for="ticketID">Ticket ID</label>
+                <input type="text" class="form-control" id="ticketID" value="AUTO_GENERATED_ID" readonly>
+            </div>
+            <div class="form-group">
+                <label for="homeNumber">Home Number</label>
+                <input type="text" class="form-control" id="homeNumber" placeholder="Enter home number">
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject of Problem</label>
+                <input type="text" class="form-control" id="subject" placeholder="Enter subject of problem">
+            </div>
+            <div class="form-group">
+                <label for="description">Description of Issue</label>
+                <textarea class="form-control" id="description" rows="3" placeholder="Enter description of issue"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="contactPerson">Contact Person</label>
+                <input type="text" class="form-control" id="contactPerson" placeholder="Enter contact person">
+            </div>
+            <div class="form-group">
+                <label for="priority">Priority of Problem</label>
+                <select class="form-control" id="priority">
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+            </div>
+            <!-- Image Upload -->
+            <div class="form-group">
+                <label for="imageUpload">Upload Image</label>
+                <input type="file" class="form-control-file" id="imageUpload">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+        </form>
+    </div>
+    <footer class="footer mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a>
+                </div>
+                <div class="col-md-6 text-right">
+                    <a href="#">Back to Dashboard</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
